@@ -19,6 +19,12 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 	</head>
 	<body class="demo-1 loading">
 		<main>
+			<div onmouseover="playMusic()">
+				<audio controls autoplay loop id="divAudio">
+					<source src="media/chayvenoiphiaanh.mp3" type="audio/mpeg">
+				  Your browser does not support the audio element.
+				</audio>
+			</div>
 			<div class="message">Please view this demo on a desktop to see the effect.</div>
 			<div class="frame">
 			</div>
@@ -33,13 +39,14 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 					<div class="grid__item pos-7"><div class="grid__item-img" style="background-image:url(./img/img7.jpg);" class="hover"></div></div>
 					<div class="grid__item pos-8"><div class="grid__item-img" style="background-image:url(./img/img8.jpg);" class="hover"></div></div>
 					<div class="grid__item pos-9"><div class="grid__item-img" style="background-image:url(./img/img9.jpg);" class="hover"></div></div>
-					<div class="grid__item pos-10"><div class="grid__item-img" style="background-image:url(./img/img10.png);" class="hover"></div></div>
+					<div class="grid__item pos-10"><div class="grid__item-img" style="background-image:url(./img/img10.jpg
+						);" class="hover"></div></div>
 				</div>
                 <h2 class="content__title no-select">
 					<span>Love</span>
 				</h2>
 				<h2 class="content__title no-select">
-					<span class="content__title-sub">Chúc em 8/3 xinh đẹp như ảnh trên mạng</span>
+					<span class="content__title-sub"></span>
 				</h2>
 			</div>
 		</main>
@@ -47,5 +54,17 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 			<circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
 		</svg>
 		<script src="./script.js"></script>
+		<script>
+			var vAudio = document.getElementById("divAudio");
+			var hasInit = false;
+			function playMusic()
+			{
+			   if(!hasInit)
+			   {
+				   hasInit = true;
+				   vAudio.play();
+			   }
+			}
+		 </script>
 	</body>
 </html>
